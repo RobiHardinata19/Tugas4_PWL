@@ -1,0 +1,99 @@
+//CREATE USER
+
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "robiAdmin",
+    "email" : "robiAdmin@gmail.com",
+    "password" : "123",
+    "confPassword" : "123",
+    "role" : "admin"
+}
+
+###
+// GET USER
+GET http://localhost:5000/users
+
+###
+// GET SINGLE USER
+GET http://localhost:5000/users/bcfa892f-7408-40e3-8517-d7dd410f2762
+
+###
+//UPDATE USER
+PATCH http://localhost:5000/users/de31610d-0507-4b31-8a67-469eb0428d2e
+Content-Type: application/json
+
+{
+    "name" : "robiADMIN",
+    "email" : "robi@gmail.com",
+    "password" : "123",
+    "confPassword" : "123",
+    "role" : "admin"
+}
+
+###
+// DELETE USER
+DELETE  http://localhost:5000/users/bcfa892f-7408-40e3-8517-d7dd410f2762
+Content-Type: application/json
+
+
+###
+// LOGIN USER
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "robiuser@gmail.com",
+    "password" : "123"
+}
+###
+// LOGIN ADMIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "robiAdmin@gmail.com",
+    "password" : "123"
+}
+
+
+###
+// CEK AKUN
+GET http://localhost:5000/me
+
+###
+//LOGOUT
+DELETE http://localhost:5000/logout
+
+###
+//GET ALL PRODUCT
+GET http://localhost:5000/products
+
+###
+//GET SINGLE PRODUCT
+GET http://localhost:5000/products/902a29f0-dcb6-406d-92f2-4a60b5a5a032
+
+###
+//CREATE DATA PRODUCT
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name" : "Sepatu nike 4",
+    "price" : "140000"
+}
+
+###
+//UPDATE DATA PRODUCT
+PATCH  http://localhost:5000/products/4b094964-0d8b-4e8a-85ce-755b01027da4
+Content-Type: application/json
+
+{
+    "name" : "Sepatu adidas UPDATE",
+    "price" : "140000"
+}
+
+###
+//DELETE PRODUCT
+DELETE http://localhost:5000/products/4b094964-0d8b-4e8a-85ce-755b01027da4
